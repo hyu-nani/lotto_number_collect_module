@@ -1,4 +1,4 @@
-# lotto_number_collect_module
+# lotto_number_collect_module<br>
 현존하는 모든 복권 번호 수집 후 확률 계산기
 ┌───────────────────────────────────────────┐
 │                                           │
