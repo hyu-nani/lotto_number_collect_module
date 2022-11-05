@@ -1,5 +1,5 @@
 # lotto_number_collect_module
-현존하는 모든 복권 번호 수집 후 확률 계산기<br>
+복권 번호 확률정리기 <br>
 <br>
 │       복권 번호 확률정리기                  │<br>
 │       Version 1.0                         │<br>
