@@ -4,7 +4,7 @@ author : hyu-nani
 '''
 
 import os
-import xlwings as xw
+from openpyxl import load_workbook
 import shutil
 from datetime import datetime
 import time
@@ -13,7 +13,7 @@ print()
 print("\t┌───────────────────────────────────────────┐")
 print("\t│                                           │")
 print("\t│       복권 번호 확률정리기                │")
-print("\t│       Version 1.0                         │")
+print("\t│       Version 1.2                         │")
 print("\t│                             [ NANI ]      │")
 print("\t└───────────────────────────────────────────┘\n")
 
@@ -32,10 +32,11 @@ selectNum = int(input("\t 파일 선택 : "))
 
 print("===================================================")
 xlFileName = file_list[selectNum]
+print(xlFileName)
+book = load_workbook(str(xlFileName))
+sheet = book['excel']
 
-book = xw.Book(xlFileName)
-sheet = xw.sheets['excel']
-roundOfEvent = int(sheet.range('B4').value)+1
+roundOfEvent = int(sheet['B4'].value)+1
 
 print("숫자 추출중",end='')
 
@@ -65,25 +66,25 @@ for i in range(45):
 
 for i in range(roundOfEvent-1,1,-1):
     nowNumList = []
-    num = int(sheet.range('N'+str(i+3)).value)
+    num = int(sheet['N'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[0] = num
-    num = int(sheet.range('O'+str(i+3)).value)
+    num = int(sheet['O'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[1] = num
-    num = int(sheet.range('P'+str(i+3)).value)
+    num = int(sheet['P'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[2] = num
-    num = int(sheet.range('Q'+str(i+3)).value)
+    num = int(sheet['Q'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[3] = num
-    num = int(sheet.range('R'+str(i+3)).value)
+    num = int(sheet['R'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[4] = num
-    num = int(sheet.range('S'+str(i+3)).value)
+    num = int(sheet['S'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[5] = num
-    num = int(sheet.range('T'+str(i+3)).value)
+    num = int(sheet['T'+str(i+3)].value)
     nowNumList.append(num)
     preNumList[6] = num
 
