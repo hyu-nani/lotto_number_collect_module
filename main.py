@@ -75,25 +75,18 @@ for i in range(roundOfEvent-1,1,-1):
     nowNumList = []
     num = int(sheet['N'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[0] = num
     num = int(sheet['O'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[1] = num
     num = int(sheet['P'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[2] = num
     num = int(sheet['Q'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[3] = num
     num = int(sheet['R'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[4] = num
     num = int(sheet['S'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[5] = num
     num = int(sheet['T'+str(i+3)].value)
     nowNumList.append(num)
-    preNumList[6] = num
 
     if i > roundOfEvent-5:
         recentList1.append(preNumList)
@@ -165,7 +158,7 @@ for i in range(45):
     print('\t',end='')
     if numberSortList[i] < 10:
         print(numberSortList[i],end='  : ')
-    else:
+    else:in
         print(numberSortList[i],end=' : ')
     print(numberCameOutSort[i],end=' 회 / 중복 : ')
     print(duplicateNumberSort[i],end='회 \n')
