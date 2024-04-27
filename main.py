@@ -75,21 +75,28 @@ for i in range(roundOfEvent-1,1,-1):
     nowNumList = []
     num = int(sheet['N'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[0] = num
     num = int(sheet['O'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[1] = num
     num = int(sheet['P'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[2] = num
     num = int(sheet['Q'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[3] = num
     num = int(sheet['R'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[4] = num
     num = int(sheet['S'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[5] = num
     num = int(sheet['T'+str(i+3)].value)
     nowNumList.append(num)
+    preNumList[6] = num
 
     if i > roundOfEvent-5:
-        recentList1.append(preNumList)
+        recentList1.append(nowNumList)
     # 각 번호 나온 횟수 추가
     for j in range(7):
         for k in range(1,46):
