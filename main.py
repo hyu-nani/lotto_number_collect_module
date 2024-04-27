@@ -118,9 +118,9 @@ for i in range(45):
     else:
         print(i+1,end=' : ')
     print("숫자 ",end='가 나올확률은')
-    print((numberCameOut[i]/roundOfEvent)*100.0,end='%이고 연속으로 나온횟수는')
+    print(round((numberCameOut[i]/roundOfEvent)*100.0,3),end='%이고 연속으로 나온횟수는')
     print(duplicateNumber[i],end='회 \n')
-print("\t중복 총 횟수:",end='')
+print("\t라면 6개의 중복되지 않는 번호를 뽑는다면 다음번에 가장 나올 확률이 높은 숫자로 이루어진 나열을 10가지 알려줘",end='')
 print(sum(duplicateNumber))
 
 print("중복 갯수 계산..............")
