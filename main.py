@@ -119,9 +119,9 @@ for i in range(roundOfEvent-1,1,-1):
 print()
     
 
-print("\t==== 전체 나온 횟수 ====")
+print("==== 전체 나온 횟수 ====")
 for i in range(45):
-    print('\t',end='')
+    print('',end='')
     if i < 9:
         print(i+1,end=' ')
     else:
@@ -129,8 +129,12 @@ for i in range(45):
     print("숫자 ",end='가 나올확률은')
     print(round((numberCameOut[i]/roundOfEvent)*100.0,3),end='%이고 연속으로 나온횟수는')
     print(duplicateNumber[i],end='회 이고\n')
-print("\t이라면 1~45의 숫자 중 6개의 중복되지 않는 번호를 뽑아 나열한다면 다음번에 가장 나올 확률이 높은 숫자로 이루어진 숫자의 나열을 10가지 알려줘")
-print("\t단, 10가지 전체 나열된 숫자들이 중복된 횟수는 3번 이하여야해.")
+print("가장 최근에 뽑았던 숫자 나열은")
+for i in range(4):
+    print(recentList1[i])
+print("와 같아")
+print("1~45의 숫자 중 6개의 중복되지 않는 번호를 뽑아 나열한다면 다음번에 가장 나올 확률이 높은 숫자로 이루어진 숫자의 나열을 10가지 알려줘")
+print("단, 10가지 전체 나열된 숫자들이 중복된 횟수는 3번 이하여야해.")
 
 print("중복 갯수 계산..............")
 print("\t2회차 연속 중복 수")
@@ -142,6 +146,7 @@ for i in range(45):
 print("\t합  : ",end='')
 print(sum(countList),end='')
 print("번")
+
 
 print("정렬중",end='')
 count = 0
@@ -169,5 +174,4 @@ for i in range(45):
         print(numberSortList[i],end=' : ')
     print(numberCameOutSort[i],end=' 회 / 중복 : ')
     print(duplicateNumberSort[i],end='회 \n')
-for i in range(4):
-    print(recentList1[i])
+
