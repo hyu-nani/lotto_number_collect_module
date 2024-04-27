@@ -46,6 +46,13 @@ numberSortList = []
 numberCameOut = []
 numberCameOutSort = []
 
+#최근 나온 회차 저장 리스트
+recentList1 = []
+recentList2 = []
+recentList3 = []
+recentList4 = []
+recentList5 = []
+
 #1~45 번의 각 중복 발생 수
 duplicateNumber = []
 duplicateNumberSort = []
@@ -88,6 +95,8 @@ for i in range(roundOfEvent-1,1,-1):
     nowNumList.append(num)
     preNumList[6] = num
 
+    if i > roundOfEvent-5:
+        recentList1.append(preNumList)
     # 각 번호 나온 횟수 추가
     for j in range(7):
         for k in range(1,46):
@@ -160,3 +169,4 @@ for i in range(45):
         print(numberSortList[i],end=' : ')
     print(numberCameOutSort[i],end=' 회 / 중복 : ')
     print(duplicateNumberSort[i],end='회 \n')
+print(recentList1)
