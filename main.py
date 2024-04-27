@@ -170,4 +170,4 @@ for i in range(45):
     print(numberCameOutSort[i],end=' 회 / 중복 : ')
     print(duplicateNumberSort[i],end='회 \n')
 for i in 4:
-    print(recentList1[i])
+    print(recentList1[i][])
