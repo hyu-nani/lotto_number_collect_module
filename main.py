@@ -117,7 +117,8 @@ for i in range(45):
         print(i+1,end='  : ')
     else:
         print(i+1,end=' : ')
-    print(numberCameOut[i],end=' 회 / 중복 : ')
+    print("숫자 ",end='가 나올확률은')
+    print((numberCameOut[i]/roundOfEvent)*100.0,end='%이고 연속으로 나온횟수는')
     print(duplicateNumber[i],end='회 \n')
 print("\t중복 총 횟수:",end='')
 print(sum(duplicateNumber))
