@@ -158,7 +158,7 @@ for i in range(45):
     print('\t',end='')
     if numberSortList[i] < 10:
         print(numberSortList[i],end='  : ')
-    else:in
+    else:
         print(numberSortList[i],end=' : ')
     print(numberCameOutSort[i],end=' 회 / 중복 : ')
     print(duplicateNumberSort[i],end='회 \n')
