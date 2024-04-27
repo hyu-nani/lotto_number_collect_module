@@ -114,14 +114,14 @@ print("\t==== 전체 나온 횟수 ====")
 for i in range(45):
     print('\t',end='')
     if i < 9:
-        print(i+1,end='   ')
+        print(i+1,end=' ')
     else:
-        print(i+1,end='  ')
+        print(i+1,end='')
     print("숫자 ",end='가 나올확률은')
     print(round((numberCameOut[i]/roundOfEvent)*100.0,3),end='%이고 연속으로 나온횟수는')
-    print(duplicateNumber[i],end='회 \n')
+    print(duplicateNumber[i],end='회 이고\n')
 print("\t이라면 1~45의 숫자 중 6개의 중복되지 않는 번호를 뽑아 나열한다면 다음번에 가장 나올 확률이 높은 숫자로 이루어진 숫자의 나열을 10가지 알려줘")
-print("\t단, 10가지 나열중 각 나열에서 중복된 숫자는 3번 이하여야해.")
+print("\t단, 10가지 전체 나열된 숫자들이 중복된 횟수는 3번 이하여야해.")
 
 print("중복 갯수 계산..............")
 print("\t2회차 연속 중복 수")
