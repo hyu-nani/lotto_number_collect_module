@@ -131,7 +131,13 @@ for i in range(45):
     print(duplicateNumber[i],end='회 이고\n')
 print("가장 최근에 뽑았던 숫자 나열은")
 for i in range(4):
-    print(recentList1[i])
+    print(i+1, end='. ')
+    for j in range(6):
+        print(recentList1[i][j],end='')
+        if j == 5:
+            print('')
+        else:
+            print(',',end='')
 print("와 같아")
 print("1~45의 숫자 중 6개의 중복되지 않는 번호를 뽑아 나열한다면 다음번에 가장 나올 확률이 높은 숫자로 이루어진 숫자의 나열을 10가지 알려줘")
 print("단, 10가지 전체 나열된 숫자들이 중복된 횟수는 3번 이하여야해.")
